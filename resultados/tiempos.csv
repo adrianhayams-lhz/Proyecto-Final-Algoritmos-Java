@@ -1,0 +1,9 @@
+tipo,criterio,algoritmo,tiempo_promedio_ns
+ordenamiento,Precio ascendente,Merge Sort,15820
+ordenamiento,Precio ascendente,Quick Sort,3017
+ordenamiento,Precio ascendente,Heap Sort,15184
+ordenamiento,Calificación descendente,Merge Sort,46325
+ordenamiento,Calificación descendente,Quick Sort,8611
+ordenamiento,Calificación descendente,Heap Sort,6271
+busqueda,20 consultas,Binaria por id,947
+busqueda,20 consultas,Lineal por nombre,45200
