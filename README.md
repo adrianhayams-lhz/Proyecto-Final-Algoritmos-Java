@@ -1,70 +1,66 @@
-Proyecto final de algoritmos
+# Proyecto final de algoritmos
 
-En este proyecto hice un programa en Java que trabaja con una lista de 50 productos de una tienda. La idea principal es probar tres algoritmos de ordenamiento: Merge Sort, Quick Sort y Heap Sort, para comparar el tiempo que tarda cada uno.
+En este proyecto hice un programa en Java que trabaja con una lista de 50 productos de una tienda. El programa permite ordenar los productos por precio y calificación, además de buscarlos por su id o escribiendo una parte del nombre.
 
-El programa también permite ordenar los productos por precio o calificación y hacer búsquedas por id o por una parte del nombre.
+También utilicé Merge Sort, Quick Sort y Heap Sort para comparar el tiempo que tarda cada algoritmo usando los mismos productos.
 
-Que se necesita
+## Requisitos
 
-Java 17 o superior.
+- Java 17 o superior.
+- Visual Studio Code.
+- Extensión **Extension Pack for Java**.
 
-Visual Studio Code con el paquete de extensiones Extension Pack for Java.
+## Cómo abrir el proyecto
 
-Como abrir el proyecto
+1. Abre la carpeta del proyecto en Visual Studio Code.
+2. Entra a `src/com/tienda/app/Principal.java`.
+3. Presiona el botón **Run** que aparece arriba del método `main`.
 
-Abre la carpeta del proyecto en Visual Studio Code.
+También se puede ejecutar presionando `Ctrl + Shift + P`, buscando **Tasks: Run Task** y seleccionando **Ejecutar proyecto**.
 
-Entra a src/com/tienda/app/Principal.java.
-
-Presiona el botón Run que aparece arriba del método main.
-
-Otra forma de correrlo es presionar Ctrl + Shift + P, escribir Tasks: Run Task y seleccionar Ejecutar proyecto.
-
-Ejecutarlo desde la terminal
-
-Desde la raíz del proyecto, en Linux/macOS:
-
-mkdir -p out
-javac -encoding UTF-8 -d out $(find src -name "*.java")
-java -cp out com.tienda.app.Principal
+## Ejecutarlo desde la terminal
 
 En Windows PowerShell:
 
+```powershell
 New-Item -ItemType Directory -Force out
 $archivos = Get-ChildItem -Recurse src -Filter *.java | ForEach-Object FullName
 javac -encoding UTF-8 -d out $archivos
 java -cp out com.tienda.app.Principal
+```
 
-Cuando se ejecuta, el programa revisa que los 50 productos tengan ids diferentes y que los algoritmos estén ordenando correctamente. Los productos se guardan en resultados/productos.csv y los tiempos obtenidos en resultados/tiempos.csv.
+En Linux o macOS:
 
-Opciones del programa
+```bash
+mkdir -p out
+javac -encoding UTF-8 -d out $(find src -name "*.java")
+java -cp out com.tienda.app.Principal
+```
 
-Al correr Principal.java aparece un menú con estas opciones:
+## Opciones del programa
 
-Mostrar los 50 productos.
+Cuando se ejecuta el programa aparece un menú con estas opciones:
 
-Ordenar por precio ascendente.
+1. Mostrar los 50 productos.
+2. Ordenarlos por precio de menor a mayor.
+3. Ordenarlos por calificación de mayor a menor.
+4. Buscar un producto por su id.
+5. Buscar productos por nombre.
+6. Realizar las pruebas de tiempo.
+7. Salir del programa.
 
-Ordenar por calificación descendente.
+## Resultados
 
-Buscar un producto por ID.
+El programa comprueba que los productos tengan ids diferentes y que los algoritmos ordenen correctamente.
 
-Buscar productos por nombre o subcadena.
+La lista de productos se guarda en `resultados/productos.csv` y los tiempos obtenidos se guardan en `resultados/tiempos.csv`.
 
-Ejecutar las mediciones solicitadas en el proyecto.
+Los tiempos pueden variar dependiendo de la computadora y de los programas que estén abiertos mientras se realizan las pruebas.
 
-Salir del programa.
+## Archivos principales
 
-Los tiempos pueden cambiar un poco dependiendo de la computadora y de los programas que estén abiertos en ese momento.
-
-Archivos principales
-
-modelo/Producto.java: contiene los datos de cada producto.
-
-datos/GeneradorProductos.java: se encarga de crear la lista de productos.
-
-algoritmos/AlgoritmosOrdenamiento.java: contiene Merge Sort, Quick Sort y Heap Sort.
-
-algoritmos/AlgoritmosBusqueda.java: contiene la búsqueda binaria y la búsqueda lineal.
-
-app/Principal.java: ejecuta el menú y las pruebas del programa.
+- `modelo/Producto.java`: guarda los datos de cada producto.
+- `datos/GeneradorProductos.java`: crea la lista de productos.
+- `algoritmos/AlgoritmosOrdenamiento.java`: contiene los tres métodos de ordenamiento.
+- `algoritmos/AlgoritmosBusqueda.java`: contiene las búsquedas.
+- `app/Principal.java`: ejecuta el menú, las pruebas y guarda los resultados.
