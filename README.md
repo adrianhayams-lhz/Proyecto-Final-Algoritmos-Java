@@ -1,6 +1,6 @@
 # Proyecto final de algoritmos
 
-En este proyecto hice un programa en Java que trabaja con una lista de 50 productos de una tienda. El programa permite ordenar los productos por precio y calificación, además de buscarlos por su id o escribiendo una parte del nombre.
+En este proyecto se iso un programa en Java que trabaja con una lista de 50 productos de una tienda. El programa permite ordenar los productos por precio y calificación, además de buscarlos por su id o escribiendo una parte del nombre.
 
 También utilicé Merge Sort, Quick Sort y Heap Sort para comparar el tiempo que tarda cada algoritmo usando los mismos productos.
 
